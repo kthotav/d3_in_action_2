@@ -21,8 +21,6 @@
         var yScale = d3.scaleLinear().domain([0,maxImpact]).range([0,460]);
         var radiusScale = d3.scaleLinear()
           .domain([0,maxImpact]).range([1,20]);
-        var colorScale = d3.scaleLinear()
-          .domain([0,maxImpact]).range(["white","#75739F"])
 
         var tweetG = d3.select("svg")
           .selectAll("g")
