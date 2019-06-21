@@ -72,14 +72,13 @@
           
           d3.selectAll("g.overallG").select("circle")
             .each(function (p) {
-              p.region == d.region ?
+              p.region === d.region ?
                 d3.select(this).classed("active", true) :
                 d3.select(this).classed("inactive", true);
             });
           
           this.parentElement.appendChild(this);
-        };
-
+        }
 
         teamG.on("mouseout", unHighlight);
 
@@ -88,7 +87,7 @@
           
           d3.selectAll("g.overallG").select("text")
             .classed("active", false).attr("y", 30);
-        };
+        }
 
         var dataKeys = Object.keys(incomingData[0])
           .filter(d => d !== "team" && d !== "region");

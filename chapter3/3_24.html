@@ -87,7 +87,7 @@
         d3.html("../resources/icon.svg", loadSVG);
         
         function loadSVG(svgData) {
-          d3.selectAll("g").each(function() {
+          d3.selectAll("g.overallG").each(function() {
             var gParent = this;
             d3.select(svgData).selectAll("path").each(function() {
               gParent.appendChild(this.cloneNode(true));

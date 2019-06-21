@@ -62,7 +62,7 @@
           .append("text")
           .style("text-anchor", "middle")
           .attr("y", 30)
-              .text(d => d.team)
+              .text(d => d.team);
 
         teamG.on("mouseover", highlightRegion);
 
@@ -78,14 +78,13 @@
           this.parentElement.appendChild(this);
         }
 
-
         teamG.on("mouseout", unHighlight);
     
         function unHighlight() {
           d3.selectAll("g.overallG").select("circle").attr("class", "");
           d3.selectAll("g.overallG").select("text")
             .classed("active", false).attr("y", 30);
-        };
+        }
 
         var dataKeys = Object.keys(incomingData[0])
           .filter(d => d !== "team" && d !== "region");
